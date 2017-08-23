@@ -1,85 +1,14 @@
 # 网易云音乐 API
 网易云音乐 NodeJS 版 API
-<p>
-<a href="https://www.npmjs.com/package/NeteaseCloudMusicApi"><img src="https://img.shields.io/npm/v/NeteaseCloudMusicApi.svg" alt="Version"></a>
-<a href="https://www.npmjs.com/package/NeteaseCloudMusicApi"><img src="https://img.shields.io/npm/l/NeteaseCloudMusicApi.svg" alt="License"></a>
-<a href="https://www.npmjs.com/package/NeteaseCloudMusicApi"><img src="https://img.shields.io/david/dev/binaryify/NeteaseCloudMusicApi.svg" alt="devDependencies" ></a>
-<a href="https://www.npmjs.com/package/NeteaseCloudMusicApi"><img src="https://img.shields.io/david/binaryify/NeteaseCloudMusicApi.svg" alt="devDependencies" ></a>
-<a href="https://codeclimate.com/github/Binaryify/NeteaseCloudMusicApi"><img src="https://codeclimate.com/github/Binaryify/NeteaseCloudMusicApi/badges/gpa.svg" /></a>
-</p>  
 
-## 灵感来自
-[disoul/electron-cloud-music](https://github.com/disoul/electron-cloud-music)
+[TOC]
 
-[darknessomi/musicbox](https://github.com/darknessomi/musicbox)
+## 该 API 基于网易云音乐
 
-[sqaiyan/netmusic-node](https://github.com/sqaiyan/netmusic-node)
+## 线上地址
+[Emlice](http://www.emlice.top/music)
 
-
-## 版本新特性
-### 2.6.2 | 2017.7.16
-修复垃圾桶接口
-
-### 2.6.1 | 2017.7.16
-修复红心接口
-
-### 2.6.0 | 2017.6.25
-修复签到接口
-
-### 2.5.9 | 2017.6.14
-增加启动说明页
-
-### 2.5.8 | 2017.6.1
-修复若干细节问题
-
-### 2.5.7 | 2017.5.22
-修复若干问题
-
-### 2.5.6 | 2017.5.14
-增加动态消息接口
-
-### 2.5.5 | 2017.5.10
-修复 mv 排行榜接口崩溃问题
-
-### 2.5.4 | 2017.5.5
-新增点赞接口,更新文档
-
-### 2.5.3 | 2017.5.2
-修复歌手单曲数据空白问题和文档获取歌手单曲url 描述问题,更新文档
-
-### 2.5.0 | 2017.4.29
-增加 mv/专辑/歌单评论接口,增加云盘相关接口,增加获取用户动态/信息接口,增加关注/粉丝列表接口,增加收藏歌单接口,增加相似 mv/歌曲/用户接口,增加 banner 接口,增加刷新登录接口,增加电台相关接口,补充评论接口,更新文档
-
-### 2.4.6 | 2017.4.21
-增加播放 mv 接口,更新文档
-
-### 2.4.5 | 2017.4.20
-增加歌手专辑,歌手单曲等接口,修复/album 接口描述错误,更新文档
-
-### 2.4.0 | 2017.4.20
-增加歌单（网友精选碟),新碟上架,热门歌手等接口,更新文档
-
-### 2.3.4 | 2017.4.20
-增加歌曲详情接口,更新文档
-
-### 2.3.0 | 2017.4.15
-增加排行榜接口,更新文档
-
-### 2.2.0 |2017.4.14
-增加私人 FM, 喜欢歌曲,垃圾桶,每日签到等接口,更新文档
-
-### 2.1.3 | 2017.4.6
-改善文档
-
-### 2.1.0 | 2017.4.6
-增加获取评论接口以及对应单元测试,增加更新日志
-
-### 2.0.0 | 2017.4.1
-版本升级到 2.0.增加使用文档,完成项目重构,增加更完善的单元测试,升级 api 到 v2+,支持登录并获取用户信息和创建的歌单,可通过获取音乐 url 接口获取用户歌单里的的音乐,获取每日推荐歌单和每日推荐音乐
-
-
-
-## 功能特性
+## API所功能特性
 1. 登录
 2. 刷新登录
 3. 获取用户信息,歌单，收藏，mv, dj 数量
@@ -146,14 +75,14 @@
 
 ## 安装  
 ``` shell
-$ git clone git@github.com:Binaryify/NeteaseCloudMusicApi.git
+$ git clone https://github.com/zyw5791557/EmliceMusicApi.git
 $ npm install
 ```
 ## 运行
 ``` shell
-$ node app.js 
+$ node app.js
 ```
-服务器启动默认端口为3000,若不想使用3000端口,可使用以下命令:  
+服务器启动默认端口为80,若不想使用80端口,可使用以下命令:  
 Mac/Linux
 ```shell
 $ PORT=4000 node app.js
@@ -165,7 +94,7 @@ $ set PORT=4000 && node app.js
 ```
 
 ## 使用文档
-[文档地址](https://binaryify.github.io/NeteaseCloudMusicApi)
+[API文档地址](https://zyw5791557.github.io/EmliceMusicApi/#/)
 
 ![文档](https://raw.githubusercontent.com/Binaryify/NeteaseCloudMusicApi/master/static/docs.png)
 
@@ -181,5 +110,6 @@ $ npm test
 ![单元测试](https://raw.githubusercontent.com/Binaryify/NeteaseCloudMusicApi/master/static/screenshot1.png)
 ![单元测试](https://raw.githubusercontent.com/Binaryify/NeteaseCloudMusicApi/master/static/screenshot2.png)
 
-## License
-[The MIT License (MIT)](https://github.com/Binaryify/NeteaseCloudMusicApi/blob/master/LICENSE)
+
+## 项目基于 NeteaseCloudMusicApi 提供的API进行改造构建
+[原项目链接](https://github.com/Binaryify/NeteaseCloudMusicApi)
