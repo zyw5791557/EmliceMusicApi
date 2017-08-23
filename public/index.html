@@ -10,11 +10,17 @@
 
 <body>
 	<h1>该项目 API 基于网易云音乐</h1>
-	<a href="https://zyw5791557.github.io/EmliceMusicApi/#/">查看文档</a>
+	<a id="doc" href="https://zyw5791557.github.io/EmliceMusicApi/#/">查看文档</a>
 	<ul>
-		<li>1. <a href="/music">听歌先~</a></li>
+		<li><a href="/music">听歌先~</a></li>
 	</ul>
 	<style>
+		body,
+		ul,
+		li {
+			margin: 0;
+			padding: 0;
+		}
 		html,
 		body {
 			height: 100vh;
@@ -33,20 +39,13 @@
 
 		a {
 			color: #42b983;
-		}
-
-		ul,
-		li {
-			margin: 0;
-		}
-
-		ul {
-			margin-left: -40px;
-			line-height: 30px;
+			display: block;
+			text-align:center;
 		}
 
 		li {
 			list-style: none;
+			line-height: 3rem;
 		}
 	</style>
 </body>
