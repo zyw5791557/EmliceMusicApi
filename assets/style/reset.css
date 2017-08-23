@@ -1,0 +1,31 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+	font-family: "AaMissLemon";
+	src: url('/assets/font/AaMissLemon.ttf');
+}
+body {
+    font-size: 16px;
+    font-family: "AaMissLemon", "宋体", "Arial", "sans-serif";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all .5s;
+    background-image: url('../images/b1.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #333;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    color: rgba(255, 255, 255, 0);
+}
