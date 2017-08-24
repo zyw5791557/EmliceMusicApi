@@ -1,16 +1,26 @@
-const express = require('express')
-const http = require('http')
-const app = express()
+const http = require('http');
+const https = require('https');
+const fs = require('fs');
+const url = require('url');
+// SSL 证书
+// 本地测试的时候注释
+// const options = {
+//     key: fs.readFileSync('../../etc/ssl/214235821190863.key'),
+//     cert: fs.readFileSync('../../etc/ssl/214235821190863.pem')
+// };
+
+const express = require('express');
+const app = express();
 
 // 跨域设置
 app.all('*', function (req, res, next) {
-  res.header("Access-Control-Allow-Credentials", true)
-  res.header("Access-Control-Allow-Origin", "*")
-  res.header("Access-Control-Allow-Headers", "X-Requested-With")
-  res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS")
-  res.header("X-Powered-By", ' 3.2.1')
-  // res.header("Content-Type", "charset=utf-8")
-  next()
+    res.header("Access-Control-Allow-Credentials", true)
+    res.header("Access-Control-Allow-Origin", "*")
+    res.header("Access-Control-Allow-Headers", "X-Requested-With")
+    res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS")
+    res.header("X-Powered-By", "3.2.1")
+    // res.header("Content-Type", "charset=utf-8")
+    next()
 });
 
 app.use(express.static('public'));
@@ -251,11 +261,9 @@ app.get('/zyl', (req, res) => {
 	res.send('<h1 style="text-align:center;">看你妹啊, 看！</h1>');
 });
 
+http.createServer(app).listen(80);
+// 本地测试关闭
+// https.createServer(options, app).listen(443);
 
-const port = process.env.PORT || 80
-
-app.listen(port, () => {
-  console.log(`server running @${port}`)
-})
 
 module.exports = app
