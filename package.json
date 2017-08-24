@@ -16,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "big-integer": "^1.6.17",
+    "compression": "1.7.0",
     "express": "^4.15.2",
     "request": "^2.81.0"
   },
