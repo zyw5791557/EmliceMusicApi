@@ -1,7 +1,6 @@
 const http = require('http');
 const https = require('https');
 const fs = require('fs');
-const url = require('url');
 // SSL 证书
 // 本地测试的时候注释
 // const options = {
@@ -12,6 +11,10 @@ const url = require('url');
 const express = require('express');
 const app = express();
 
+// 第三方依赖
+const compression = require('compression');
+app.use(compression());
+
 // 跨域设置
 app.all('*', function (req, res, next) {
     res.header("Access-Control-Allow-Credentials", true)
@@ -19,6 +22,10 @@ app.all('*', function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "X-Requested-With")
     res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS")
     res.header("X-Powered-By", "3.2.1")
+    // 安全措施 强制浏览器只能发送 HTTPS 请求
+    res.header("Strict-Transport-Security", "max-age=31536000; includeSubDomains")
+    // 确保浏览器只在 HTTPS 下才发送 cookies
+    res.header("Set-Cookie", "LSID=DQAAAK...Eaem_vYg; Secure")
     // res.header("Content-Type", "charset=utf-8")
     next()
 });
@@ -265,5 +272,12 @@ http.createServer(app).listen(80);
 // 本地测试关闭
 // https.createServer(options, app).listen(443);
 
+// 301 HTTPS 重定向
+// http.createServer(function(req, res) {
+//     res.writeHead(302, {
+//         'Location': 'https://www.emlice.top' || 'https://emlice.top' + req.url
+//     });
+//     res.end();
+// });
 
 module.exports = app
